@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Plantilla Equipo</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="fondo">
+
+    <!-- MENU -->
+    <div class="menu">
+
+        <a href="/" class="menu-button top-button">
+            ⭐ Top Jugadores
+        </a>
+
+        <a href="/jugadores" class="menu-button">
+            🎮 Jugadores
+        </a>
+
+        <a href="/equipos" class="menu-button">
+            🏀 Equipos
+        </a>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="contenido">
+
+        <div class="panel-jugadores">
+
+            <!-- CARTA -->
+            <div class="card"
+                 th:each="jugador : ${jugadores}">
+
+                <div class="card-flip">
+
+                    <!-- PARTE DELANTERA -->
+                    <div class="fondo-carta"
+
+                         th:style="'background-image:url(/img/' +
+                         ${#strings.replace(
+                         #strings.toLowerCase(jugador.equipo),
+                         ' ',
+                         '_')} +
+                         '_fondo.png)'">
+
+                        <!-- FOTO -->
+                        <div class="foto-container">
+
+                            <img th:src="@{/img/{foto}.png(
+                                 foto=${#strings.replace(
+                                 #strings.replace(
+                                 #strings.toLowerCase(jugador.nombre),
+                                 ' ',
+                                 '_'),
+                                 '''',
+                                 '')
+                                 })}">
+
+                        </div>
+
+                        <div class="info">
+
+                            <!-- NOMBRE -->
+                            <h2 th:text="${jugador.nombre}">
+                            </h2>
+
+                            <!-- POSICION -->
+                            <h3 th:text="${jugador.posicion}">
+                            </h3>
+
+                            <!-- MEDIA -->
+                            <div class="media">
+
+                                ⭐ OVR
+
+                                <span th:text="${jugador.media}">
+                                </span>
+
+                            </div>
+
+                            <!-- PUNTOS -->
+                            <div class="stats">
+
+                                <p>
+
+                                    🏀
+
+                                    <span th:text="${jugador.puntos}">
+                                    </span>
+
+                                    PTS
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- PARTE TRASERA -->
+                    <div class="back-card">
+
+                        <h2 th:text="${jugador.nombre}">
+                        </h2>
+
+                        <div class="back-stats">
+
+                            <p>
+                                🌍 Nacionalidad:
+                                <span th:text="${jugador.nacionalidad}">
+                                </span>
+                            </p>
+
+                            <p>
+                                📏 Altura:
+                                <span th:text="${jugador.altura}">
+                                </span>
+                            </p>
+
+                            <p>
+                                ⚖️ Peso:
+                                <span th:text="${jugador.peso}">
+                                </span>
+                            </p>
+
+                            <p>
+                                🎂 Edad:
+                                <span th:text="${jugador.edad}">
+                                </span>
+                            </p>
+
+                            <p>
+                                🏀 Rebotes:
+                                <span th:text="${jugador.rebotes}">
+                                </span>
+                            </p>
+
+                            <p>
+                                🎯 Asistencias:
+                                <span th:text="${jugador.asistencias}">
+                                </span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INFO EQUIPO -->
+		<div class="info-equipo">
+
+		    <h1 th:text="${equipo.nombre}">
+		    </h1>
+
+		    <div class="datos-equipo">
+
+		        <p>
+		            🏆 Títulos NBA:
+		            <span th:text="${equipo.titulos}">
+		            </span>
+		        </p>
+
+		        <p>
+		            📅 Fundación:
+		            <span th:text="${equipo.fundacion}">
+		            </span>
+		        </p>
+
+		        <p>
+		            ⭐ Leyendas:
+		            <span th:text="${equipo.leyendas}">
+		            </span>
+		        </p>
+
+		        <p>
+		            🏟️ Estadio:
+		            <span th:text="${equipo.estadio}">
+		            </span>
+		        </p>
+
+		    </div>
+
+		    <div class="descripcion-equipo">
+
+		        <p th:text="${equipo.descripcion}">
+		        </p>
+
+		    </div>
+
+		</div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

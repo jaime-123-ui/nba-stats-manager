@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>NBA Stats Manager</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="fondo">
+
+    <!-- MENU -->
+    <div class="menu">
+
+        <a href="/" class="menu-button top-button">
+            ⭐ Top Jugadores
+        </a>
+
+        <a href="/jugadores" class="menu-button">
+            🎮 Jugadores
+        </a>
+
+        <a href="/equipos" class="menu-button">
+            🏀 Equipos
+        </a>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="contenido">
+
+        <!-- BUSCADOR -->
+		<form class="buscador"
+		      action="/jugadores"
+		      method="get">
+
+		    <input type="text"
+		           name="buscar"
+		           placeholder="Buscar jugador...">
+
+		    <button class="btn-buscar">
+		        Buscar
+		    </button>
+
+		</form>
+
+		<!-- PANEL JUGADORES -->
+		<div class="panel-jugadores">
+
+		    <!-- CARTA -->
+		    <div class="card"
+		         th:each="jugador : ${jugadores}">
+
+		        <div class="fondo-carta"
+
+		             th:style="'background-image:url(/img/' +
+		             ${#strings.replace(
+		             #strings.toLowerCase(jugador.equipo),
+		             ' ',
+		             '_')} +
+		             '_fondo.png)'">
+
+		            <!-- FOTO -->
+		            <div class="foto-container">
+
+		                <img th:src="@{/img/{foto}.png(
+		                     foto=${#strings.replace(
+		                     #strings.replace(
+		                     #strings.toLowerCase(jugador.nombre),
+		                     ' ',
+		                     '_'),
+		                     '''',
+		                     '')
+		                     })}">
+
+		            </div>
+
+		            <!-- INFO -->
+		            <div class="info">
+
+		                <!-- NOMBRE -->
+		                <h2 th:text="${jugador.nombre}">
+		                </h2>
+
+		                <!-- POSICION -->
+		                <h3 th:text="${jugador.posicion}">
+		                </h3>
+
+		                <!-- MEDIA -->
+		                <div class="media">
+
+		                    ⭐ OVR
+
+		                    <span th:text="${jugador.media}">
+		                    </span>
+
+		                </div>
+
+		                <!-- PUNTOS -->
+		                <div class="stats">
+
+		                    <p>
+
+		                        🏀
+
+		                        <span th:text="${jugador.puntos}">
+		                        </span>
+
+		                        PTS
+
+		                    </p>
+
+		                </div>
+
+		            </div>
+
+		        </div>
+
+		    </div>
+
+		</div>
+
+</body>
+</html>

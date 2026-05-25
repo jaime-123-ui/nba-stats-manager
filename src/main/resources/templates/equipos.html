@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Equipos NBA</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="fondo">
+
+    <!-- MENU -->
+    <div class="menu">
+
+        <a href="/" class="menu-button top-button">
+            ⭐ Top Jugadores
+        </a>
+
+        <a href="/jugadores" class="menu-button">
+            🎮 Jugadores
+        </a>
+
+        <a href="/equipos" class="menu-button">
+            🏀 Equipos
+        </a>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="contenido">
+
+        <div class="panel-jugadores">
+
+            <!-- CARTA -->
+            <a th:href="@{/equipos/{id}(id=${equipo.id})}"
+               class="card-link"
+               th:each="equipo : ${equipos}">
+
+                <div class="card">
+
+					<div class="fondo-carta"
+					th:style="'background-image: url(/img/' + 
+					${#strings.toLowerCase(equipo.nombre)} + 
+					'_equipo_fondo.png)'">
+
+                        <!-- FOTO -->
+                        <div class="foto-container">
+
+                            <img th:src="@{/img/{foto}(foto=${equipo.imagen})}"
+                                 class="foto-equipo">
+
+                        </div>
+
+                        <!-- INFO -->
+                        <div class="info">
+
+                            <h2 th:text="${equipo.nombre}">
+                            </h2>
+
+                            <h3 th:text="${equipo.ciudad}">
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

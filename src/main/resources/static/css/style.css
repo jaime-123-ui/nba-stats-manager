@@ -1,0 +1,534 @@
+body{
+
+    margin:0;
+    padding:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    overflow:hidden;
+
+    background:black;
+}
+
+/* FONDO */
+
+.fondo{
+
+    width:100vw;
+    height:100vh;
+
+    background-image:url('/img/fondo_ventanaprincipal.png');
+
+    background-size:100% 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+}
+
+/* MENU LATERAL */
+
+.menu{
+
+    width:380px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    padding-top:340px;
+
+    gap:35px;
+}
+
+/* BOTONES */
+
+.menu-button{
+
+    width:240px;
+    height:65px;
+
+    background:#121212;
+
+    border:2px solid #444;
+
+    border-radius:14px;
+
+    color:white;
+
+    text-decoration:none;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+    font-weight:bold;
+
+    transition:0.3s;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.6);
+}
+
+.menu-button:hover{
+
+    transform:scale(1.05);
+
+    background:#1f1f1f;
+
+    border-color:#777;
+}
+
+/* BOTON TOP */
+
+.top-button{
+
+    background:#c8102e;
+
+    border:2px solid #ff4569;
+}
+
+.top-button:hover{
+
+    background:#df1238;
+}
+
+/* CONTENIDO */
+
+.contenido{
+
+    flex:1;
+
+    padding-top:40px;
+}
+
+/* BUSCADOR */
+
+.buscador{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-left:120px;
+
+    margin-bottom:30px;
+}
+
+/* INPUT */
+
+.buscador input{
+
+    width:350px;
+    height:45px;
+
+    background:rgba(0,0,0,0.8);
+
+    border:2px solid #333;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-size:18px;
+
+    padding-left:15px;
+
+    outline:none;
+}
+
+/* BOTON BUSCAR */
+
+.btn-buscar{
+
+    width:120px;
+    height:45px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#c8102e;
+
+    color:white;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.btn-buscar:hover{
+
+    transform:scale(1.05);
+
+    background:#df1238;
+}
+
+/* PANEL CARTAS */
+
+.panel-jugadores{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+    margin-left:160px;
+
+    height:760px;
+
+    overflow-y:auto;
+
+    padding-right:20px;
+	
+	padding-top:10px;
+	padding-left:10px;
+}
+
+/* SCROLL */
+
+.panel-jugadores::-webkit-scrollbar{
+
+    width:10px;
+}
+
+.panel-jugadores::-webkit-scrollbar-thumb{
+
+    background:#777;
+
+    border-radius:10px;
+}
+
+/* CARTA */
+
+.card{
+
+    width:220px;
+    height:350px;
+
+    border:2px solid gold;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    background:black;
+
+    transition:0.3s;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+}
+
+.card:hover{
+
+    transform:scale(1.03);
+}
+
+/* FONDO CARTA */
+
+.fondo-carta{
+
+    width:100%;
+    height:100%;
+
+    background-size:cover;
+    background-position:center;
+	background-repeat:no-repeat;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+}
+
+/* FOTO */
+
+.foto-container{
+
+    width:100%;
+    height:260px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.foto-container img{
+
+    max-width:170px;
+    max-height:190px;
+
+    object-fit:contain;
+
+    transform: translateY(0px);
+}
+/* INFO */
+
+.info{
+
+    text-align:center;
+
+    padding-bottom:15px;
+
+    background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.2));
+}
+
+/* NOMBRE */
+
+.info h2{
+
+    color:white;
+
+    font-size:16px;
+
+    margin:0;
+}
+
+/* EQUIPO */
+
+.info h3{
+
+    color:cyan;
+
+    font-size:15px;
+
+    margin-top:6px;
+    margin-bottom:6px;
+}
+
+/* POSICION */
+
+.info span{
+
+    color:gold;
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+/* STATS */
+
+.stats{
+
+    margin-top:8px;
+}
+
+.stats p{
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    margin:0;
+}
+
+.stats span{
+
+    color:gold;
+
+    font-size:24px;
+}
+
+.media{
+
+    margin-top:8px;
+
+    color:gold;
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+.foto-equipo{
+
+    width: 170px;
+    height: 170px;
+
+    object-fit: contain;
+}
+
+/* ========================= */
+/* FLIP 3D */
+/* ========================= */
+
+.card{
+
+    perspective:1000px;
+}
+
+/* CONTENIDO INTERNO */
+
+.card-flip{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+    transition:transform 0.8s;
+}
+
+/* GIRO */
+
+.card:hover .card-flip{
+
+    transform:rotateY(180deg);
+}
+
+/* DOS CARAS */
+
+.fondo-carta,
+.back-card{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    top:0;
+    left:0;
+
+    backface-visibility:hidden;
+
+    border-radius:12px;
+
+    overflow:hidden;
+}
+
+/* TRASERA */
+
+.back-card{
+
+    background:#111;
+
+    transform:rotateY(180deg);
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+    box-sizing:border-box;
+}
+
+/* STATS */
+
+.back-card h2{
+
+    color:gold;
+
+    margin-bottom:20px;
+}
+
+.back-stats p{
+
+    margin:10px 0;
+
+    font-size:16px;
+
+    font-weight:bold;
+}
+
+.back-stats span{
+
+    color:cyan;
+}
+
+/* ========================= */
+/* PANEL INFO EQUIPO */
+/* ========================= */
+
+.info-equipo{
+
+    width:1100px;
+
+    min-height:220px;
+
+	margin-top:-365px;
+
+	margin-left:auto;
+	margin-right:auto;
+
+    background:rgba(0,0,0,0.72);
+
+    border:2px solid gold;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    color:white;
+
+    backdrop-filter:blur(4px);
+
+    box-shadow:0 0 25px rgba(0,0,0,0.8);
+}
+
+/* TITULO */
+
+.info-equipo h1{
+
+    color:gold;
+
+    font-size:38px;
+
+    margin-top:0;
+
+    margin-bottom:25px;
+}
+
+/* DATOS */
+
+.datos-equipo{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-bottom:25px;
+}
+
+.datos-equipo p{
+
+    font-size:20px;
+
+    color:white;
+
+    margin:0;
+}
+
+/* DESCRIPCION */
+
+.descripcion-equipo p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#ddd;
+
+    margin:0;
+}
