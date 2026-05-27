@@ -88,12 +88,12 @@ public class EquiposController {
 
         try {
 
-            Connection conexion =
-                    DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/nba_manager",
-                            "root",
-                            "1234"
-                    );
+        	Connection conexion =
+        	        DriverManager.getConnection(
+        	                System.getenv("SPRING_DATASOURCE_URL"),
+        	                System.getenv("SPRING_DATASOURCE_USERNAME"),
+        	                System.getenv("SPRING_DATASOURCE_PASSWORD")
+        	        );
 
             String sql =
             	    "SELECT jugadores.*, " +
@@ -197,12 +197,12 @@ public class EquiposController {
 
         try {
 
-            Connection conexion =
-                    DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/nba_manager",
-                            "root",
-                            "1234"
-                    );
+        	Connection conexion =
+        	        DriverManager.getConnection(
+        	                System.getenv("SPRING_DATASOURCE_URL"),
+        	                System.getenv("SPRING_DATASOURCE_USERNAME"),
+        	                System.getenv("SPRING_DATASOURCE_PASSWORD")
+        	        );
 
             String sqlEquipo =
                     "SELECT * FROM equipos WHERE id = ?";
