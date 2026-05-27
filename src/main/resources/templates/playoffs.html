@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>NBA Playoffs</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="fondo playoff-fondo">
+    <!-- MENU -->
+    <div class="menu">
+
+        <a href="/" class="menu-button top-button">
+            ⭐ Top Jugadores
+        </a>
+
+        <a href="/jugadores" class="menu-button">
+            🎮 Jugadores
+        </a>
+
+        <a href="/equipos" class="menu-button">
+            🏀 Equipos
+        </a>
+
+        <a href="/playoffs" class="menu-button">
+            🏆 Playoffs
+        </a>
+
+    </div>
+
+    <!-- CONTENIDO -->
+	<div class="contenido">
+
+	    <div class="playoff-container">
+
+			<img src="/img/celtics.png"
+			class="logo-equipo logo_partido1_equipo1">
+
+			<div th:class="${p1 != null and p1.ganador == p1.equipo1}
+			? 'equipo ganador partido1_equipo1'
+			: 'equipo partido1_equipo1'">
+
+			    <span th:text="${p1 != null ? p1.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img src="/img/heat.png"
+			class="logo-equipo logo_partido1_equipo2">
+
+			<div th:class="${p1 != null and p1.ganador == p1.equipo2}
+			? 'equipo ganador partido1_equipo2'
+			: 'equipo partido1_equipo2'">
+
+			    <span th:text="${p1 != null ? p1.resultado2 : ''}">
+			    </span>
+
+			</div>
+			
+			<!-- ========================= -->
+			<!-- PARTIDO 2 -->
+			<!-- ========================= -->
+
+			<img src="/img/bucks.png"
+			class="logo-equipo logo_partido2_equipo1">
+
+			<div th:class="${p2 != null and p2.ganador == p2.equipo1}
+			? 'equipo ganador partido2_equipo1'
+			: 'equipo partido2_equipo1'">
+
+			<span th:text="${p2 != null ? p2.resultado1 : ''}">
+			</span>
+
+			</div>
+
+
+
+			<img src="/img/sixers.png"
+			class="logo-equipo logo_partido2_equipo2">
+
+			<div th:class="${p2 != null and p2.ganador == p2.equipo2}
+			? 'equipo ganador partido2_equipo2'
+			: 'equipo partido2_equipo2'">
+
+			    <span th:text="${p2 != null ? p2.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- PARTIDO 3 -->
+			<!-- ========================= -->
+
+			<img src="/img/knicks.png"
+			class="logo-equipo logo_partido3_equipo1">
+
+			<div th:class="${p3 != null and p3.ganador == p3.equipo1}
+			? 'equipo ganador partido3_equipo1'
+			: 'equipo partido3_equipo1'">
+
+			    <span th:text="${p3 != null ? p3.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img src="/img/cavaliers.png"
+			class="logo-equipo logo_partido3_equipo2">
+
+			<div th:class="${p3 != null and p3.ganador == p3.equipo2}
+			? 'equipo ganador partido3_equipo2'
+			: 'equipo partido3_equipo2'">
+
+			    <span th:text="${p3 != null ? p3.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- PARTIDO 4 -->
+			<!-- ========================= -->
+
+			<img src="/img/pacers.png"
+			class="logo-equipo logo_partido4_equipo1">
+
+			<div th:class="${p4 != null and p4.ganador == p4.equipo1}
+			? 'equipo ganador partido4_equipo1'
+			: 'equipo partido4_equipo1'">
+
+			    <span th:text="${p4 != null ? p4.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img src="/img/magic.png"
+			class="logo-equipo logo_partido4_equipo2">
+
+			<div th:class="${p4 != null and p4.ganador == p4.equipo2}
+			? 'equipo ganador partido4_equipo2'
+			: 'equipo partido4_equipo2'">
+
+			    <span th:text="${p4 != null ? p4.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- PARTIDO 5 -->
+			<!-- ========================= -->
+
+			<img src="/img/nuggets.png"
+			class="logo-equipo logo_partido5_equipo1">
+
+			<div th:class="${p5 != null and p5.ganador == p5.equipo1}
+			? 'equipo ganador partido5_equipo1'
+			: 'equipo partido5_equipo1'">
+
+			    <span th:text="${p5 != null ? p5.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img src="/img/lakers.png"
+			class="logo-equipo logo_partido5_equipo2">
+
+			<div th:class="${p5 != null and p5.ganador == p5.equipo2}
+			? 'equipo ganador partido5_equipo2'
+			: 'equipo partido5_equipo2'">
+
+			    <span th:text="${p5 != null ? p5.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- PARTIDO 6 -->
+			<!-- ========================= -->
+
+			<img src="/img/suns.png"
+			class="logo-equipo logo_partido6_equipo1">
+
+			<div th:class="${p6 != null and p6.ganador == p6.equipo1}
+			? 'equipo ganador partido6_equipo1'
+			: 'equipo partido6_equipo1'">
+
+			    <span th:text="${p6 != null ? p6.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img src="/img/warriors.png"
+			class="logo-equipo logo_partido6_equipo2">
+
+			<div th:class="${p6 != null and p6.ganador == p6.equipo2}
+			? 'equipo ganador partido6_equipo2'
+			: 'equipo partido6_equipo2'">
+
+			    <span th:text="${p6 != null ? p6.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- PARTIDO 7 -->
+			<!-- ========================= -->
+
+			<img src="/img/mavericks.png"
+			class="logo-equipo logo_partido7_equipo1">
+
+			<div th:class="${p7 != null and p7.ganador == p7.equipo1}
+			? 'equipo ganador partido7_equipo1'
+			: 'equipo partido7_equipo1'">
+
+			    <span th:text="${p7 != null ? p7.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img src="/img/kings.png"
+			class="logo-equipo logo_partido7_equipo2">
+
+			<div th:class="${p7 != null and p7.ganador == p7.equipo2}
+			? 'equipo ganador partido7_equipo2'
+			: 'equipo partido7_equipo2'">
+
+			    <span th:text="${p7 != null ? p7.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- PARTIDO 8 -->
+			<!-- ========================= -->
+
+			<img src="/img/timberwolves.png"
+			class="logo-equipo logo_partido8_equipo1">
+
+			<div th:class="${p8 != null and p8.ganador == p8.equipo1}
+			? 'equipo ganador partido8_equipo1'
+			: 'equipo partido8_equipo1'">
+
+			    <span th:text="${p8 != null ? p8.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img src="/img/clippers.png"
+			class="logo-equipo logo_partido8_equipo2">
+
+			<div th:class="${p8 != null and p8.ganador == p8.equipo2}
+			? 'equipo ganador partido8_equipo2'
+			: 'equipo partido8_equipo2'">
+
+			    <span th:text="${p8 != null ? p8.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- SEMIFINAL 1 -->
+			<!-- ========================= -->
+
+			<img th:if="${s1 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(s1.equipo1)} + '.png'}"
+			class="logo-equipo logo_semifinal1_equipo1">
+
+			<div th:class="${s1 != null and s1.ganador == s1.equipo1}
+			? 'equipo ganador semifinal1_equipo1'
+			: 'equipo semifinal1_equipo1'">
+
+			    <span th:text="${s1 != null ? s1.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img th:if="${s1 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(s1.equipo2)} + '.png'}"
+			class="logo-equipo logo_semifinal1_equipo2">
+
+			<div th:class="${s1 != null and s1.ganador == s1.equipo2}
+			? 'equipo ganador semifinal1_equipo2'
+			: 'equipo semifinal1_equipo2'">
+
+			    <span th:text="${s1 != null ? s1.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- SEMIFINAL 2 -->
+			<!-- ========================= -->
+
+			<img th:if="${s2 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(s2.equipo1)} + '.png'}"
+			class="logo-equipo logo_semifinal2_equipo1">
+
+			<div th:class="${s2 != null and s2.ganador == s2.equipo1}
+			? 'equipo ganador semifinal2_equipo1'
+			: 'equipo semifinal2_equipo1'">
+
+			    <span th:text="${s2 != null ? s2.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img th:if="${s2 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(s2.equipo2)} + '.png'}"
+			class="logo-equipo logo_semifinal2_equipo2">
+
+			<div th:class="${s2 != null and s2.ganador == s2.equipo2}
+			? 'equipo ganador semifinal2_equipo2'
+			: 'equipo semifinal2_equipo2'">
+
+			    <span th:text="${s2 != null ? s2.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- SEMIFINAL OESTE 1 -->
+			<!-- ========================= -->
+
+			<img th:if="${s3 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(s3.equipo1)} + '.png'}"
+			class="logo-equipo logo_semifinal3_equipo1">
+
+			<div th:class="${s3 != null and s3.ganador == s3.equipo1}
+			? 'equipo ganador semifinal3_equipo1'
+			: 'equipo semifinal3_equipo1'">
+
+			    <span th:text="${s3 != null ? s3.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img th:if="${s3 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(s3.equipo2)} + '.png'}"
+			class="logo-equipo logo_semifinal3_equipo2">
+
+			<div th:class="${s3 != null and s3.ganador == s3.equipo2}
+			? 'equipo ganador semifinal3_equipo2'
+			: 'equipo semifinal3_equipo2'">
+
+			    <span th:text="${s3 != null ? s3.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- SEMIFINAL OESTE 2 -->
+			<!-- ========================= -->
+
+			<img th:if="${s4 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(s4.equipo1)} + '.png'}"
+			class="logo-equipo logo_semifinal4_equipo1">
+
+			<div th:class="${s4 != null and s4.ganador == s4.equipo1}
+			? 'equipo ganador semifinal4_equipo1'
+			: 'equipo semifinal4_equipo1'">
+
+			    <span th:text="${s4 != null ? s4.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img th:if="${s4 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(s4.equipo2)} + '.png'}"
+			class="logo-equipo logo_semifinal4_equipo2">
+
+			<div th:class="${s4 != null and s4.ganador == s4.equipo2}
+			? 'equipo ganador semifinal4_equipo2'
+			: 'equipo semifinal4_equipo2'">
+
+			    <span th:text="${s4 != null ? s4.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- FINAL ESTE -->
+			<!-- ========================= -->
+
+			<img th:if="${f1 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(f1.equipo1)} + '.png'}"
+			class="logo-equipo logo_final_este_equipo1">
+
+			<div th:class="${f1 != null and f1.ganador == f1.equipo1}
+			? 'equipo ganador final_este_equipo1'
+			: 'equipo final_este_equipo1'">
+
+			    <span th:text="${f1 != null ? f1.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img th:if="${f1 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(f1.equipo2)} + '.png'}"
+			class="logo-equipo logo_final_este_equipo2">
+
+			<div th:class="${f1 != null and f1.ganador == f1.equipo2}
+			? 'equipo ganador final_este_equipo2'
+			: 'equipo final_este_equipo2'">
+
+			    <span th:text="${f1 != null ? f1.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- FINAL OESTE -->
+			<!-- ========================= -->
+
+			<img th:if="${f2 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(f2.equipo1)} + '.png'}"
+			class="logo-equipo logo_final_oeste_equipo1">
+
+			<div th:class="${f2 != null and f2.ganador == f2.equipo1}
+			? 'equipo ganador final_oeste_equipo1'
+			: 'equipo final_oeste_equipo1'">
+
+			    <span th:text="${f2 != null ? f2.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img th:if="${f2 != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(f2.equipo2)} + '.png'}"
+			class="logo-equipo logo_final_oeste_equipo2">
+
+			<div th:class="${f2 != null and f2.ganador == f2.equipo2}
+			? 'equipo ganador final_oeste_equipo2'
+			: 'equipo final_oeste_equipo2'">
+
+			    <span th:text="${f2 != null ? f2.resultado2 : ''}">
+			    </span>
+
+			</div>
+			
+
+			<!-- ========================= -->
+			<!-- NBA FINALS -->
+			<!-- ========================= -->
+
+			<img th:if="${nba != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(nba.equipo1)} + '.png'}"
+			class="logo-equipo logo_nba_finals_equipo1">
+
+			<div th:class="${nba != null and nba.ganador == nba.equipo1}
+			? 'equipo ganador nba_finals_equipo1'
+			: 'equipo nba_finals_equipo1'">
+
+			    <span th:text="${nba != null ? nba.resultado1 : ''}">
+			    </span>
+
+			</div>
+
+
+
+			<img th:if="${nba != null}"
+			th:src="@{'/img/' + ${#strings.toLowerCase(nba.equipo2)} + '.png'}"
+			class="logo-equipo logo_nba_finals_equipo2">
+
+			<div th:class="${nba != null and nba.ganador == nba.equipo2}
+			? 'equipo ganador nba_finals_equipo2'
+			: 'equipo nba_finals_equipo2'">
+
+			    <span th:text="${nba != null ? nba.resultado2 : ''}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- CAMPEON NBA -->
+			<!-- ========================= -->
+
+			<div th:if="${campeon != null}"
+			class="campeon-nba">
+
+			    🏆 NBA CHAMPIONS 2026
+
+			    <br><br>
+
+			    <span th:text="${campeon}">
+			    </span>
+
+			</div>
+
+			<!-- ========================= -->
+			<!-- BOTON SIMULAR -->
+			<!-- ========================= -->
+
+			<form th:if="${campeon == null}"
+			      action="/simular-playoffs"
+			      method="post">
+
+			    <button class="btn-simular">
+
+			        🎮 SIMULAR PLAYOFFS
+
+			    </button>
+
+			</form>
+
+</body>
+
+</html>

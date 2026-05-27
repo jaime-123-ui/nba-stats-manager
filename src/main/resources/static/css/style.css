@@ -532,3 +532,841 @@ body{
 
     margin:0;
 }
+/* PLAYOFFS */
+
+.titulo-playoff{
+
+    color:white;
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:30px;
+
+    text-shadow:0 0 20px gold;
+}
+
+.ronda{
+
+    margin-bottom:40px;
+
+    padding-left:120px;
+}
+
+.ronda h2{
+
+    color:gold;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+}
+
+.match{
+
+    width:500px;
+
+    background:rgba(0,0,0,0.8);
+
+    border:2px solid gold;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.8);
+
+    transition:0.3s;
+}
+
+.match:hover{
+
+    transform:scale(1.03);
+}
+
+.team{
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+}
+
+.ganador{
+
+    color:lime;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-top:10px;
+}
+
+.campeon-box{
+
+    width:600px;
+
+    margin:40px auto;
+
+    background:rgba(0,0,0,0.9);
+
+    border:3px solid gold;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:white;
+
+    font-size:30px;
+
+    box-shadow:0 0 25px gold;
+}
+
+.campeon-box h1{
+
+    color:gold;
+
+    font-size:55px;
+
+    margin-top:20px;
+
+    text-shadow:0 0 20px gold;
+}
+/* BRACKET PLAYOFFS */
+
+.bracket{
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:flex-start;
+
+    overflow-x:auto;
+
+    padding:20px;
+}
+
+.columna{
+
+    min-width:350px;
+}
+
+.columna h2{
+
+    color:gold;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-size:30px;
+
+    text-shadow:0 0 10px gold;
+}
+
+.match{
+
+    background:rgba(0,0,0,0.85);
+
+    border:2px solid gold;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.8);
+
+    transition:0.3s;
+}
+
+.match:hover{
+
+    transform:scale(1.05);
+}
+
+.team{
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+.ganador{
+
+    color:lime;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-top:15px;
+}
+
+.campeon-box{
+
+    margin-top:40px;
+
+    background:rgba(0,0,0,0.9);
+
+    border:3px solid gold;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:0 0 20px gold;
+}
+
+.campeon-box h1{
+
+    color:gold;
+
+    font-size:40px;
+
+    margin-top:15px;
+
+    text-shadow:0 0 15px gold;
+}
+/* FONDO SOLO PLAYOFFS */
+
+.playoff-fondo{
+
+    background-image:url('/img/playoff-bracket.png') !important;
+
+    background-size:cover !important;
+
+    background-position:center !important;
+
+    background-repeat:no-repeat !important;
+}
+
+/* CONTENEDOR PLAYOFFS */
+
+.playoff-container{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+}
+
+/* ========================= */
+/* PLAYOFFS POSICIONES */
+/* ========================= */
+
+.equipo{
+
+    position:absolute;
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:14px;
+}
+
+.ganador{
+
+    color:lime;
+}
+
+/* ========================= */
+/* ESTE */
+/* ========================= */
+
+.partido1_equipo1{
+
+    margin-top:105px;
+	top:55spx;
+    left:170px;
+}
+
+.partido1_equipo2{
+
+	top:155px;
+	left:170px;
+}
+.logo_partido1_equipo1{
+
+    top:88px;
+
+    left:110px;
+}
+
+.logo_partido1_equipo2{
+
+    top:145px;
+
+    left:110px;
+}
+/* ========================= */
+/* PARTIDO 2 */
+/* ========================= */
+
+.logo_partido2_equipo1{
+
+    top:266px;
+
+    left:110px;
+}
+
+.logo_partido2_equipo2{
+
+    top:325px;
+
+    left:110px;
+}
+
+.partido2_equipo1{
+
+    top:288px;
+
+    left:170px;
+}
+
+.partido2_equipo2{
+
+    top:330px;
+
+    left:170px;
+}
+
+/* ========================= */
+/* PARTIDO 3 */
+/* ========================= */
+
+.logo_partido3_equipo1{
+
+    top:462px;
+
+    left:115px;
+}
+
+.logo_partido3_equipo2{
+
+    top:522px;
+
+    left:110px;
+}
+
+.partido3_equipo1{
+
+    top:478px;
+
+    left:180px;
+}
+
+.partido3_equipo2{
+
+    top:527px;
+
+    left:170px;
+}
+
+/* ========================= */
+/* PARTIDO 4 */
+/* ========================= */
+
+.logo_partido4_equipo1{
+
+    top:640px;
+
+    left:110px;
+}
+
+.logo_partido4_equipo2{
+
+    top:700px;
+
+    left:110px;
+}
+
+.partido4_equipo1{
+
+    top:658px;
+
+    left:170px;
+}
+
+.partido4_equipo2{
+
+    top:707px;
+
+    left:170px;
+}
+
+/* ========================= */
+/* PARTIDO 5 */
+/* ========================= */
+
+.logo_partido5_equipo1{
+
+    top:88px;
+
+    left:1355px;
+}
+
+.logo_partido5_equipo2{
+
+    top:145px;
+
+    left:1355px;
+}
+
+.partido5_equipo1{
+
+    margin-top:50px;
+
+    top:55px;
+
+    left:1250px;
+}
+
+.partido5_equipo2{
+
+    top:155px;
+
+    left:1260px;
+}
+
+/* ========================= */
+/* PARTIDO 6 */
+/* ========================= */
+
+.logo_partido6_equipo1{
+
+    top:266px;
+
+    left:1355px;
+}
+
+.logo_partido6_equipo2{
+
+    top:325px;
+
+    left:1355px;
+}
+
+.partido6_equipo1{
+
+    top:288px;
+
+    left:1260px;
+}
+
+.partido6_equipo2{
+
+    top:330px;
+
+    left:1250px;
+}
+
+/* ========================= */
+/* PARTIDO 7 */
+/* ========================= */
+
+.logo_partido7_equipo1{
+
+    top:462px;
+
+    left:1355px;
+}
+
+.logo_partido7_equipo2{
+
+    top:522px;
+
+    left:1355px;
+}
+
+.partido7_equipo1{
+
+    top:478px;
+
+    left:1250px;
+}
+
+.partido7_equipo2{
+
+    top:527px;
+
+    left:1260px;
+}
+
+/* ========================= */
+/* PARTIDO 8 */
+/* ========================= */
+
+.logo_partido8_equipo1{
+
+    top:640px;
+
+    left:1355px;
+}
+
+.logo_partido8_equipo2{
+
+    top:700px;
+
+    left:1355px;
+}
+
+.partido8_equipo1{
+
+    top:658px;
+
+    left:1230px;
+}
+
+.partido8_equipo2{
+
+    top:707px;
+
+    left:1250px;
+}
+
+/* ========================= */
+/* SEMIFINAL ESTE */
+/* ========================= */
+
+.logo_semifinal1_equipo1{
+
+    top:210px;
+
+    left:345px;
+}
+
+.logo_semifinal1_equipo2{
+
+    top:265px;
+
+    left:345px;
+}
+
+.semifinal1_equipo1{
+
+    top:230px;
+
+    left:400px;
+}
+
+.semifinal1_equipo2{
+
+    top:270px;
+
+    left:410px;
+}
+
+/* ========================= */
+/* SEMIFINAL ESTE 2 */
+/* ========================= */
+
+.logo_semifinal2_equipo1{
+
+    top:545px;
+
+    left:340px;
+}
+
+.logo_semifinal2_equipo2{
+
+    top:600px;
+
+    left:340px;
+}
+
+.semifinal2_equipo1{
+
+    top:560px;
+
+    left:400px;
+}
+
+.semifinal2_equipo2{
+
+    top:600px;
+
+    left:400px;
+}
+
+/* ========================= */
+/* SEMIFINAL OESTE 1 */
+/* ========================= */
+
+.logo_semifinal3_equipo1{
+
+    top:210px;
+
+    left:1110px;
+}
+
+.logo_semifinal3_equipo2{
+
+    top:265px;
+
+    left:1110px;
+}
+
+.semifinal3_equipo1{
+
+    top:228px;
+
+    left:1020px;
+}
+
+.semifinal3_equipo2{
+
+    top:267px;
+
+    left:1010px;
+}
+
+/* ========================= */
+/* SEMIFINAL OESTE 2 */
+/* ========================= */
+
+.logo_semifinal4_equipo1{
+
+    top:540px;
+
+    left:1110px;
+}
+
+.logo_semifinal4_equipo2{
+
+    top:600px;
+
+    left:1110px;
+}
+
+.semifinal4_equipo1{
+
+    top:558px;
+
+    left:1020px;
+}
+
+.semifinal4_equipo2{
+
+    top:607px;
+
+    left:1010px;
+}
+
+/* ========================= */
+/* FINAL ESTE */
+/* ========================= */
+
+.logo_final_este_equipo1{
+
+    top:370px;
+
+    left:550px;
+}
+
+.logo_final_este_equipo2{
+
+    top:425px;
+
+    left:550px;
+}
+
+.final_este_equipo1{
+
+    top:388px;
+
+    left:610px;
+}
+
+.final_este_equipo2{
+
+    top:427px;
+
+    left:610px;
+}
+
+/* ========================= */
+/* FINAL OESTE */
+/* ========================= */
+
+.logo_final_oeste_equipo1{
+
+    top:370px;
+
+    left:900px;
+}
+
+.logo_final_oeste_equipo2{
+
+    top:425px;
+
+    left:900px;
+}
+
+.final_oeste_equipo1{
+
+    top:388px;
+
+    left:810px;
+}
+
+.final_oeste_equipo2{
+
+    top:427px;
+
+    left:810px;
+}
+
+/* ========================= */
+/* NBA FINALS */
+/* ========================= */
+
+.logo_nba_finals_equipo1{
+
+    top:600px;
+
+    left:640px;
+}
+
+.logo_nba_finals_equipo2{
+
+    top:665px;
+
+    left:640px;
+}
+
+.nba_finals_equipo1{
+
+    top:620px;
+
+    left:730px;
+}
+
+.nba_finals_equipo2{
+
+    top:665px;
+
+    left:730px;
+}
+
+/* ========================= */
+/* CAMPEON NBA */
+/* ========================= */
+
+.campeon-nba{
+
+    position:absolute;
+
+    top:730px;
+
+    left:530px;
+
+    width:500px;
+
+    text-align:center;
+
+    color:gold;
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    text-shadow:0 0 20px gold;
+}
+/* GANADOR */
+
+.ganador-playoff{
+
+    color:lime;
+}
+
+/* LOGOS EQUIPOS */
+
+.logo-equipo{
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:contain;
+
+    position:absolute;
+}
+
+.logo_partido1_equipo1{
+
+    top:88px;
+
+    left:110px;
+}
+
+.logo_partido1_equipo2{
+
+    top:145px;
+
+    left:110px;
+}
+
+/* BOTON SIMULAR */
+
+.btn-simular{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:360px;
+
+    height:75px;
+
+    background:#c8102e;
+
+    border:none;
+
+    border-radius:18px;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+}
+
+.btn-simular:hover{
+
+    transform:translateX(-50%) scale(1.05);
+
+    background:#ff214b;
+}
